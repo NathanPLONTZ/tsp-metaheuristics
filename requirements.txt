@@ -1,0 +1,32 @@
+# Dependencies
+#
+# This is a Java project, so this file is a manifest rather than something pip
+# can install. The jars are not committed; drop them in lib/ before building the
+# competition harness.
+#
+# Required:
+#   JDK 17 or later  (built and measured with JDK 21)
+#
+# Runtime jars, needed only by the competition harness in tsp.run:
+#
+#   jfreechart   1.0.19      live fitness and tour charts
+#   jcommon      1.0.23      required by jfreechart
+#   reflections  0.9.12      discovers the CompetitorProject subclasses to run
+#   javassist    3.21.0-GA   required by reflections
+#
+# Maven coordinates:
+#
+#   org.jfree:jfreechart:1.0.19
+#   org.jfree:jcommon:1.0.23
+#   org.reflections:reflections:0.9.12
+#   org.javassist:javassist:3.21.0-GA
+#
+# Fetch them with Maven into lib/:
+#
+#   mvn -q dependency:copy-dependencies -DoutputDirectory=lib
+#
+# or download each from https://repo1.maven.org/maven2/
+#
+# The algorithms themselves (tsp.projects.competitor.common) and the headless
+# benchmark (tsp.bench.Benchmark) have no third party dependencies at all, so
+# the measurements in the README reproduce with nothing but a JDK.

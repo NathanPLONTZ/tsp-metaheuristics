@@ -1,0 +1,45 @@
+# --- Build output ---
+build/
+bin/
+out/
+target/
+*.class
+*.jar.tmp
+
+# --- Third party jars ---
+# Not redistributed. See requirements.txt for the exact versions and how to
+# fetch them.
+lib/*
+!lib/.gitkeep
+
+# --- Generated at run time ---
+# The harness writes a log of every evaluation, and the benchmark writes CSV.
+*.log
+tsp.log
+results/
+*.csv
+
+# --- Large or derived data ---
+# The three instances shipped in data/ are small text files and are tracked.
+# Anything else dropped in there is not.
+data/*
+!data/bier127.tsp
+!data/gr666.tsp
+!data/pr8192.tsp
+
+# --- IDE and editor ---
+.idea/
+*.iml
+*.ipr
+*.iws
+.project
+.classpath
+.settings/
+.vscode/
+*.swp
+*~
+
+# --- OS ---
+Thumbs.db
+Desktop.ini
+.DS_Store
